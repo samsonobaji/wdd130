@@ -1,38 +1,37 @@
-Color Variables
-:root {
-    --primary-color: #D5D7E8;
-    --secondary-color: #3539BD;
-    --accent1-color: #333F;
-    --accent2-color: #D5D7E8;
+Color Variables :root {
+  --primary-color: #d5d7e8;
+  --secondary-color: #3539bd;
+  --accent1-color: #333f;
+  --accent2-color: #d5d7e8;
 }
 
 /* General Styles */
 body {
-    font-family: 'Roboto', sans-serif ;
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 1em;
-    background-color: var(--primary-color);
+  font-family: "Roboto", sans-serif;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1em;
+  background-color: var(--primary-color);
 }
 
 header {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    justify-content: space-between;
-    align-items: center;
-    /* padding: 1rems; */
-    background-color: var(--secondary-color);
-    color: var(--accent1-color);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 1rems; */
+  background-color: var(--secondary-color);
+  color: var(--accent1-color);
 }
 
-header nav{
+header nav {
   display: flex;
   justify-content: flex-end;
   gap: 1rem;
 }
 
 header img {
-    height: 50px;
+  height: 50px;
 }
 
 /* Banner Section */
@@ -89,14 +88,14 @@ header img {
 }
 
 .newsletter .button {
-  padding: 7px 5.0px;
+  padding: 7px 5px;
   background-color: #333;
   color: white;
   border: none;
   border-radius: 5px;
   font-size: 1em;
   text-decoration: none;
-} 
+}
 
 .newsletter .button:hover {
   background-color: #555;
@@ -121,8 +120,6 @@ header img {
 .cta .btn:hover {
   background-color: #555;
 }
-
-
 
 /* Content Grid Section */
 .content-grid {
@@ -149,18 +146,16 @@ header img {
   margin: 1em 0 0 0;
 }
 
-
-nav ul{
+nav ul {
   display: flex;
   gap: 1rem;
-
 }
 
 nav a {
-    color: var(--accent1-color);
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
+  color: var(--accent1-color);
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 header nav a {
@@ -170,38 +165,38 @@ header nav a {
   transition: background-color 0.3s, text-decoration 0.3s;
 }
 
-header nav a:hover{
+header nav a:hover {
   background-color: var(--accent2-color);
   text-decoration: underline;
 }
 
-nav a:active{
+nav a:active {
   background-color: var(--accent1-color);
   color: var(--secondary-color);
 }
 
 .hero {
-    position: relative;
-    text-align: center;
-    color: white;
+  position: relative;
+  text-align: center;
+  color: white;
 }
 
 .hero img {
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
 }
 
 .hero h1 {
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 3em;
-    background-color: rgba(34, 45, 198, 0.5);
-    padding: 10px;
-    z-index: 2;
-    color: white;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2em;
+  background-color: rgba(34, 45, 198, 0.5);
+  padding: 10px;
+  z-index: 2;
+  color: white;
 }
 
 .hero article {
@@ -211,7 +206,7 @@ nav a:active{
   transform: translate(-50%, -50%);
   background-color: rgba(20, 9, 242, 0.8);
   padding: 15px;
-  width:80%;
+  width: 80%;
   border-radius: 10px;
   text-align: justify;
   z-index: 1;
@@ -230,14 +225,14 @@ section {
   margin: 20px;
 }
 
-.history{
+.history {
   padding: 20px;
   margin: 20px;
   text-align: justify;
-  align-items: center ;
+  align-items: center;
 }
 
-.adventure{
+.adventure {
   padding: 20px;
   margin: 20px;
   display: grid;
@@ -250,40 +245,40 @@ section {
   margin: 0;
   display: flex;
   flex-direction: column;
-  text-align: center;}
+  text-align: center;
+}
 
-  .adventure figcaption {
+.adventure figcaption {
   text-align: center;
   font-size: 0.9em;
   color: var(--secondary-color);
-
 }
-.adventure img{
+.adventure img {
   width: 100%;
   font-size: 0.9em;
   color: var(--secondary-color);
 }
 
 /*contact page styles*/
-.contact-info{
+.contact-info {
   text-align: left;
 }
 
-.contact-info h2{
+.contact-info h2 {
   font-size: 1.5em;
   margin-bottom: 10px;
 }
 
-.contact-info p{
-  margin:5px 0;
+.contact-info p {
+  margin: 5px 0;
 }
 
 .contact-info .map-container {
   margin-top: 20px;
 }
 
-.contact-info iframe{
-  width:100%;
+.contact-info iframe {
+  width: 100%;
   height: 400px;
   border: none;
   border-radius: 10px;
@@ -329,7 +324,7 @@ section {
   border: 2px solid var(--secondary-color);
   border-radius: 10px;
   background-color: white;
-  box-shadow: 0 0 10px ;
+  box-shadow: 0 0 10px;
 }
 
 .contact-form h2 {
@@ -387,22 +382,22 @@ section {
 }
 
 footer {
-    background-color: var(--secondary-color);
-    color: var(--accent1-color);
-    text-align: center;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-content: center;
+  background-color: var(--secondary-color);
+  color: var(--accent1-color);
+  text-align: center;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
 }
 
-footer p{
-  flex:1;
-  text-align:center;
-  margin:0;
-} 
+footer p {
+  flex: 1;
+  text-align: center;
+  margin: 0;
+}
 
-.social-links{
+.social-links {
   display: flex;
   justify-content: flex-end;
   gap: 10px;
@@ -431,12 +426,12 @@ footer p{
 .trip-item {
   text-align: center;
 }
-.large{
+.large {
   grid-row: span 4;
 }
 .trip-item img {
   width: 100%; /* Ensures image takes the full width of .trip-item */
-  height:auto;
+  height: auto;
   border-radius: 8px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -456,7 +451,7 @@ footer p{
   text-align: center;
   transition: transform 0.2s;
 }
-.trip-card:hover{
+.trip-card:hover {
   box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.5);
   transform: translateY(-20px);
 }
@@ -468,4 +463,4 @@ footer p{
 
 .trip-card p {
   margin: 8px 0;
-} 
+}
