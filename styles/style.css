@@ -27,7 +27,7 @@ aside img {
 
 /* Make profile image more exclusive */
 main img {
-  width: 150px;
+  width: 200px;
   height: auto;
   border-radius: 50%;
   display: block;
@@ -43,7 +43,7 @@ p {
 
 /* Styling the footer */
 footer {
-  margin-top: 30px;
+  margin-top: 20px;
   border-top: 2px solid #444;
   text-align: center;
   padding: 15px;
