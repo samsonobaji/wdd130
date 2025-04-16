@@ -1,9 +1,3 @@
-Here’s the combined **rafting.css**, which integrates the CSS for your **about.html**, **contactus.html**, **index.html**, and **trips.html** while maintaining consistent styles across all pages. It ensures user-friendly navigation and visual appeal without altering the functionality.
-
----
-
-### **Combined rafting.css**
-```css
 /* Universal styles */
 * {
   margin: 0;
