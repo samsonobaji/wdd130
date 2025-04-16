@@ -1,466 +1,353 @@
-Color Variables :root {
-  --primary-color: #d5d7e8;
-  --secondary-color: #3539bd;
-  --accent1-color: #333f;
-  --accent2-color: #d5d7e8;
+Here’s the combined **rafting.css**, which integrates the CSS for your **about.html**, **contactus.html**, **index.html**, and **trips.html** while maintaining consistent styles across all pages. It ensures user-friendly navigation and visual appeal without altering the functionality.
+
+---
+
+### **Combined rafting.css**
+```css
+/* Universal styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* General Styles */
+/* Body styling */
 body {
   font-family: "Roboto", sans-serif;
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 1em;
-  background-color: var(--primary-color);
+  background-color: #e0f7fa; /* Soft turquoise background */
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
 }
 
+/* Header styling */
 header {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  justify-content: space-between;
-  align-items: center;
-  /* padding: 1rems; */
-  background-color: var(--secondary-color);
-  color: var(--accent1-color);
-}
-
-header nav {
-  display: flex;
-  justify-content: flex-end;
-  gap: 1rem;
+  background-color: #00796b; /* Rich teal for a bold appearance */
+  color: white;
+  padding: 1rem 0;
+  text-align: center;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.4); /* Subtle shadow */
 }
 
 header img {
-  height: 50px;
+  width: 120px;
+  height: auto;
+  margin-bottom: 0.5rem;
 }
 
-/* Banner Section */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem; /* Adds spacing between navigation items */
+}
+
+nav a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #80cbc4; /* Hover effect with complementary light teal */
+}
+
+/* Hero Section */
+.hero,
 .banner {
-  position: relative;
   text-align: center;
-  color: white;
+  padding: 2rem;
+  background-color: #b2dfdb; /* Light green background */
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Subtle depth */
 }
 
+.hero img,
 .banner img {
   width: 100%;
   height: auto;
+  border-radius: 10px;
 }
 
-.banner-message {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(0, 126, 175, 0.554);
-  padding: 1em;
-  border-radius: 5px;
-}
-
+.hero h1,
 .banner-message h1 {
-  margin: 0;
+  font-family: "DM Serif Text", serif;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #004d40;
+}
+
+.hero p,
+.banner-message p {
+  font-size: 1.2rem;
+  color: #00796b;
+}
+
+/* Buttons */
+.btn,
+.hero button,
+.cta a,
+.newsletter button {
+  background-color: #004d40;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none; /* Ensures links styled as buttons don’t have underlines */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover,
+.hero button:hover,
+.cta a:hover,
+.newsletter button:hover {
+  background-color: #00251a;
+  transform: scale(1.1); /* Adds interactivity */
+}
+
+/* Purpose Section */
+.purpose,
+.trip,
+.content-grid,
+.trips-grid,
+.contact-info {
+  padding: 2rem;
+  background-color: #e0f2f1; /* Light aqua background */
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Adds subtle depth */
+}
+
+.purpose h2,
+.trip h1,
+.content-grid h2,
+.trips-grid h1,
+.contact-info h2 {
+  text-align: center;
+  font-family: "DM Serif Text", serif;
+  margin-bottom: 1rem;
+  color: #004d40;
+}
+
+/* Cards and Grid Items */
+.trip-item,
+.grid-item,
+.trip-card {
+  text-align: center;
+  padding: 1rem;
+  background-color: #b2dfdb; /* Light green for card backgrounds */
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Subtle depth */
+  transition: transform 0.3s ease;
+}
+
+.trip-item img,
+.grid-item img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease; /* Adds hover effect */
+}
+
+.trip-item img:hover,
+.grid-item img:hover {
+  transform: scale(1.1); /* Interactive zoom effect */
+}
+
+.trip-item p,
+.grid-item p,
+.trip-card p {
+  font-size: 1rem;
+  color: #00796b;
+}
+
+.trip-card:hover {
+  transform: scale(1.05); /* Subtle hover lift */
+}
+
+.trip-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #00796b;
 }
 
 /* Newsletter Section */
 .newsletter {
-  background-color: #f4f4f4;
-  padding: 2em;
   text-align: center;
+  border-radius: 10px;
+  background-color: #80cbc4; /* Vibrant teal background */
+  margin-bottom: 2rem;
+  padding: 2rem;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Subtle depth */
+}
+
+.newsletter h1 {
+  font-family: "DM Serif Text", serif;
+  color: white;
+  margin-bottom: 1rem;
 }
 
 .newsletter form {
-  display: inline-block;
-  text-align: left;
-  max-width: 400px;
-  width: 100%;
-}
-
-.newsletter label {
-  display: block;
-  margin-bottom: 0.5em;
-}
-
-.newsletter input {
-  width: 100%;
-  padding: 0.5em;
-  margin-bottom: 1em;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.newsletter .button {
-  padding: 7px 5px;
-  background-color: #333;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 1em;
-  text-decoration: none;
-}
-
-.newsletter .button:hover {
-  background-color: #555;
-}
-
-/* Call to Action Section */
-.cta {
-  background-color: #e2e2e2;
-  padding: 2em;
-  text-align: center;
-}
-
-.cta .btn {
-  background-color: #333;
-  color: white;
-  padding: 1em 2em;
-  text-decoration: none;
-  border-radius: 5px;
-  font-size: 1.2em;
-}
-
-.cta .btn:hover {
-  background-color: #555;
-}
-
-/* Content Grid Section */
-.content-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1em;
-  padding: 2em;
-}
-
-.content-grid .grid-item {
-  background-color: #f4f4f4;
-  padding: 1em;
-  text-align: center;
-  border-radius: 5px;
-}
-
-.content-grid .grid-item img {
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
-}
-
-.content-grid .grid-item p {
-  margin: 1em 0 0 0;
-}
-
-nav ul {
   display: flex;
-  gap: 1rem;
-}
-
-nav a {
-  color: var(--accent1-color);
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-header nav a {
-  color: var(--accent1-color);
-  padding: 8px 16px;
-  border-radius: 4px;
-  transition: background-color 0.3s, text-decoration 0.3s;
-}
-
-header nav a:hover {
-  background-color: var(--accent2-color);
-  text-decoration: underline;
-}
-
-nav a:active {
-  background-color: var(--accent1-color);
-  color: var(--secondary-color);
-}
-
-.hero {
-  position: relative;
-  text-align: center;
-  color: white;
-}
-
-.hero img {
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-}
-
-.hero h1 {
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 2em;
-  background-color: rgba(34, 45, 198, 0.5);
-  padding: 10px;
-  z-index: 2;
-  color: white;
-}
-
-.hero article {
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(20, 9, 242, 0.8);
-  padding: 15px;
-  width: 80%;
-  border-radius: 10px;
-  text-align: justify;
-  z-index: 1;
-}
-
-.hero article img {
-  float: right;
-  margin-left: 15px;
-  width: 150px;
-  height: auto;
-}
-
-/* Section Styles */
-section {
-  padding: 20px;
-  margin: 20px;
-}
-
-.history {
-  padding: 20px;
-  margin: 20px;
-  text-align: justify;
+  flex-direction: column;
   align-items: center;
 }
 
-.adventure {
-  padding: 20px;
-  margin: 20px;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 20px;
-  text-align: center;
+.newsletter label {
+  font-weight: bold;
+  color: white;
+  margin-bottom: 0.5rem;
 }
 
-.adventure figure {
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
-
-.adventure figcaption {
-  text-align: center;
-  font-size: 0.9em;
-  color: var(--secondary-color);
-}
-.adventure img {
-  width: 100%;
-  font-size: 0.9em;
-  color: var(--secondary-color);
-}
-
-/*contact page styles*/
-.contact-info {
-  text-align: left;
-}
-
-.contact-info h2 {
-  font-size: 1.5em;
-  margin-bottom: 10px;
-}
-
-.contact-info p {
-  margin: 5px 0;
-}
-
-.contact-info .map-container {
-  margin-top: 20px;
-}
-
-.contact-info iframe {
-  width: 100%;
-  height: 400px;
-  border: none;
-  border-radius: 10px;
+.newsletter input {
+  width: 80%;
+  margin-bottom: 1rem;
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.1); /* Adds depth inside inputs */
 }
 
 /* Employees Section */
 .employees {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
-  gap: 20px;
-}
-
-.employees h2 {
-  font-size: 1.5em;
-  margin-bottom: 10px;
-  width: 100%;
-  text-align: center;
-}
-
-.employees figure {
-  text-align: center;
-  width: 30%;
-  margin: 0 20px;
-}
-
-.employees img {
-  width: 200px;
-  height: 250px;
-  border-radius: 10px;
-  margin-bottom: 5px;
-}
-
-.employees figcaption {
-  font-size: 1em;
-  color: var(--secondary-color);
-}
-
-/* Contact Form */
-.contact-form {
-  margin-top: 20px;
-  padding: 20px;
-  border: 2px solid var(--secondary-color);
-  border-radius: 10px;
-  background-color: white;
-  box-shadow: 0 0 10px;
-}
-
-.contact-form h2 {
-  font-size: 1.5em;
-  margin-bottom: 10px;
-}
-
-.contact-form form {
-  display: flex;
-  flex-direction: column;
-}
-
-.contact-form label {
-  margin: 10px 0 5px;
-  font-weight: bold;
-}
-
-.contact-form input:focus-visible,
-.contact-form textarea:focus-visible {
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid var(--secondary-color);
-  border-radius: 5px;
-  font-size: 1em;
-  outline: 2px solid var(--secondary-color);
-}
-
-.contact-form textarea {
-  resize: vertical;
-  height: 100px;
-}
-
-.contact-form input[type="radio"] {
-  margin-right: 5px;
-}
-
-.contact-form .radio-group {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 10px;
-}
-.contact-form .button {
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  background-color: var(--secondary-color);
-  color: white;
-  font-size: 1em;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.contact-form button:hover {
-  background-color: var(--accent1-color);
-}
-
-footer {
-  background-color: var(--secondary-color);
-  color: var(--accent1-color);
-  text-align: center;
-  padding: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-content: center;
-}
-
-footer p {
-  flex: 1;
-  text-align: center;
-  margin: 0;
-}
-
-.social-links {
-  display: flex;
-  justify-content: flex-end;
-  gap: 10px;
-}
-
-.social-links a {
-  margin: 0 5px;
-}
-
-.social-links img {
-  width: 30px;
-  height: auto;
-}
-.trip {
   display: grid;
-  grid-template-columns: 2fr 1fr; /* Creates a responsive grid layout */
-  grid-template-rows: auto auto;
-  gap: 20px; /* Space between items */
-  justify-content: center;
-  align-items: start;
-  width: 100%;
-  max-width: 1200px;
-  margin: auto;
-}
-
-.trip-item {
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(200px, 1fr)
+  ); /* Responsive grid layout */
+  gap: 1rem;
   text-align: center;
-}
-.large {
-  grid-row: span 4;
-}
-.trip-item img {
-  width: 100%; /* Ensures image takes the full width of .trip-item */
-  height: auto;
-  border-radius: 8px;
+  padding: 2rem;
+  background-color: #b2dfdb;
+  border-radius: 10px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.trip-item h1 {
-  font-size: 1.2em;
-  margin-top: 10px;
+.employees img {
+  width: 80px; /* Smaller images for team members */
+  height: auto;
+  border-radius: 50%;
+  margin: 0 auto;
+  transition: transform 0.3s ease;
 }
 
-/* Styling for each trip card */
-.trip-card {
-  background-color: #ffffff;
-  border: 1px solid #dddddd;
-  border-radius: 8px;
-  padding: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.employees img:hover {
+  transform: scale(1.2); /* Interactive hover */
+}
+
+.employees figcaption {
+  margin-top: 0.5rem;
+  font-weight: bold;
+  color: #00796b;
+}
+
+/* Map Section */
+.map iframe {
+  width: 90%;
+  height: 300px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Adds subtle depth */
+  margin: 2rem auto;
+  border: none;
+}
+
+/* Contact Form Section */
+.contact-form {
+  padding: 2rem;
+  background-color: #80cbc4;
+  border-radius: 10px;
+  margin: 2rem auto;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Adds depth */
+  max-width: 600px;
   text-align: center;
-  transition: transform 0.2s;
-}
-.trip-card:hover {
-  box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.5);
-  transform: translateY(-20px);
-}
-.trip-card h2 {
-  margin-top: 0;
-  color: #009879;
-  font-size: 1.1em;
 }
 
-.trip-card p {
-  margin: 8px 0;
+.contact-form h2 {
+  font-family: "DM Serif Text", serif;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.contact-form label {
+  display: block;
+  text-align: left;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+.contact-form button {
+  background-color: #004d40;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-form button:hover {
+  background-color: #00251a;
+  transform: scale(1.1); /* Adds interactivity */
+}
+
+/* Footer */
+footer {
+  background-color: #000; /* Solid black background */
+  color: white; /* Contrasting white text */
+  padding: 2rem 0;
+  text-align: center;
+  border-top: 2px solid #00796b; /* Optional teal border for accent */
+}
+
+footer p {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+footer .social-links a {
+  margin: 0 0.5rem;
+  display: inline-block;
+}
+
+footer .social-links img {
+  width: 30px; /* Standard size for social icons */
+  height: 30px;
+  border-radius: 50%; /* Makes icons circular */
+  transition: transform 0.2s ease;
+  box-shadow: 0px 2px 4px rgba(255, 255, 255, 0.5); /* Subtle glowing effect for icons */
+}
+
+footer .social-links img:hover {
+  transform: scale(1.2); /* Interactive zoom effect */
+  box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.8); /* Enhanced glow on hover */
+}
+
+footer p {
+  font-weight: bold; /* Slight emphasis on text */
+  font-family: "Roboto", sans-serif; /* Consistent font styling */
 }
